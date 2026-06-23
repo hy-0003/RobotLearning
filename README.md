@@ -41,7 +41,7 @@ Overcame GPU OOM, path issues, and dependency hell to achieve **87%+ success rat
 
 ---
 
-### 2. Multi‑Robot Scheduler with LLM & Disjunctive Graph
+### 2. Multi‑Robot Scheduler with LLM
 
 Closed‑loop system that combines LLM task planning, disjunctive graph scheduling, and simulation‑in‑the‑loop to solve MRTA‑Benchmark problems.  
 
