@@ -1,0 +1,83 @@
+{
+  "report_id": "eval_problem_instance_1p_000002_20260623_173215",
+  "generated_at": "2026-06-23 17:32:15",
+  "scene_id": "problem_instance_1p_000002",
+  "data_source": "MRTA-Benchmark (arXiv:2603.02669)",
+  "simulator_mode": "Mock Simulator",
+  "scene_scale": {
+    "n_operations": 8,
+    "n_robots": 3,
+    "n_workpieces": 3
+  },
+  "harness_iterations": 1,
+  "metrics_comparison": {
+    "makespan": {
+      "baseline": 520.2935,
+      "actual": 534.2435,
+      "delta_pct": 2.68,
+      "verdict": "[OK] 达标"
+    },
+    "task_success_rate": {
+      "baseline": 1.0,
+      "actual": 1.0,
+      "delta": 0.0,
+      "verdict": "[OK] 达标"
+    },
+    "resource_utilization": {
+      "baseline": 0.492,
+      "actual": 0.4792,
+      "delta_pct": -2.61,
+      "verdict": "[OK] 达标"
+    },
+    "constraint_violations": {
+      "baseline": 0,
+      "actual": 0,
+      "verdict": "[OK] 达标"
+    }
+  },
+  "overall_score": 100,
+  "overall_verdict": "系统表现接近最优基准，Harness 闭环调度有效。",
+  "note": "（调度器计划 makespan，含运输时间）",
+  "detailed_comparisons": [
+    {
+      "metric_name": "总完成时间 (makespan)",
+      "metric_key": "makespan",
+      "baseline_value": 520.2935,
+      "actual_value": 534.2435,
+      "delta": 13.950000000000045,
+      "delta_pct": 2.6811789883979036,
+      "direction": "lower_is_better",
+      "verdict": "[OK] 达标"
+    },
+    {
+      "metric_name": "任务成功率",
+      "metric_key": "task_success_rate",
+      "baseline_value": 1.0,
+      "actual_value": 1.0,
+      "delta": 0.0,
+      "delta_pct": 0.0,
+      "direction": "higher_is_better",
+      "verdict": "[OK] 达标"
+    },
+    {
+      "metric_name": "资源利用率（机械臂）",
+      "metric_key": "resource_utilization",
+      "baseline_value": 0.492,
+      "actual_value": 0.4791822455490801,
+      "delta": -0.012817754450919872,
+      "delta_pct": -2.605234644495909,
+      "direction": "higher_is_better",
+      "verdict": "[OK] 达标"
+    },
+    {
+      "metric_name": "违反约束次数",
+      "metric_key": "constraint_violations",
+      "baseline_value": 0.0,
+      "actual_value": 0.0,
+      "delta": 0.0,
+      "delta_pct": 0.0,
+      "direction": "lower_is_better",
+      "verdict": "[OK] 达标"
+    }
+  ]
+}

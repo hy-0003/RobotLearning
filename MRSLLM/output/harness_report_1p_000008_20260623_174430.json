@@ -1,0 +1,679 @@
+{
+  "scene_id": "problem_instance_1p_000008",
+  "total_iterations": 1,
+  "successful": true,
+  "iterations": [
+    {
+      "iteration_num": 1,
+      "success": true,
+      "task_plan": {
+        "instruction": "完成所有 8 个任务的调度，最小化 makespan，3 台机器人协作，其中 op_1 为协作任务需多台机器人配合",
+        "operations": [
+          "op_1",
+          "op_2",
+          "op_3",
+          "op_4",
+          "op_5",
+          "op_6",
+          "op_7",
+          "op_8"
+        ],
+        "robot_assignments": {
+          "op_1": [
+            "arm_0",
+            "arm_1"
+          ],
+          "op_2": [
+            "arm_1"
+          ],
+          "op_3": [
+            "arm_0"
+          ],
+          "op_4": [
+            "arm_0"
+          ],
+          "op_5": [
+            "arm_1"
+          ],
+          "op_6": [
+            "arm_1"
+          ],
+          "op_7": [
+            "arm_1"
+          ],
+          "op_8": [
+            "arm_1"
+          ]
+        },
+        "reasoning": "根据操作可用机器人和协作要求，op_1为协作任务，分配arm_0和arm_1共同执行。其他操作按各自可用机器人分配，arm_2无可用任务。操作顺序按工件工艺流程列出，满足op_6依赖op_5的关系。由于arm_1任务较多，但受限于操作可用性，此分配是在给定约束下最小化makespan的可行方案。"
+      },
+      "schedule": {
+        "entries": [
+          {
+            "operation_id": "op_3",
+            "workpiece_id": "wp_0",
+            "robot_id": "arm_0",
+            "start_time": 0.0,
+            "end_time": 79.0,
+            "resources": [
+              "gripper",
+              "tool_0",
+              "loc_3"
+            ]
+          },
+          {
+            "operation_id": "op_5",
+            "workpiece_id": "wp_1",
+            "robot_id": "arm_1",
+            "start_time": 0.0,
+            "end_time": 82.0,
+            "resources": [
+              "gripper",
+              "tool_1",
+              "loc_5"
+            ]
+          },
+          {
+            "operation_id": "op_8",
+            "workpiece_id": "wp_2",
+            "robot_id": "arm_1",
+            "start_time": 82.0,
+            "end_time": 148.0,
+            "resources": [
+              "gripper",
+              "tool_1",
+              "loc_8"
+            ]
+          },
+          {
+            "operation_id": "op_2",
+            "workpiece_id": "wp_0",
+            "robot_id": "arm_1",
+            "start_time": 148.0,
+            "end_time": 235.0,
+            "resources": [
+              "gripper",
+              "tool_1",
+              "loc_2"
+            ]
+          },
+          {
+            "operation_id": "op_1",
+            "workpiece_id": "wp_0",
+            "robot_id": "arm_0",
+            "start_time": 235.0,
+            "end_time": 289.0,
+            "resources": [
+              "gripper",
+              "tool_0",
+              "tool_1",
+              "loc_1"
+            ]
+          },
+          {
+            "operation_id": "op_1",
+            "workpiece_id": "wp_0",
+            "robot_id": "arm_1",
+            "start_time": 235.0,
+            "end_time": 289.0,
+            "resources": [
+              "gripper",
+              "tool_0",
+              "tool_1",
+              "loc_1"
+            ]
+          },
+          {
+            "operation_id": "op_4",
+            "workpiece_id": "wp_1",
+            "robot_id": "arm_0",
+            "start_time": 289.0,
+            "end_time": 344.0,
+            "resources": [
+              "gripper",
+              "tool_0",
+              "loc_4"
+            ]
+          },
+          {
+            "operation_id": "op_7",
+            "workpiece_id": "wp_2",
+            "robot_id": "arm_1",
+            "start_time": 289.0,
+            "end_time": 345.0,
+            "resources": [
+              "gripper",
+              "tool_1",
+              "loc_7"
+            ]
+          },
+          {
+            "operation_id": "op_6",
+            "workpiece_id": "wp_1",
+            "robot_id": "arm_1",
+            "start_time": 345.0,
+            "end_time": 444.0,
+            "resources": [
+              "gripper",
+              "tool_1",
+              "loc_6"
+            ]
+          }
+        ],
+        "metrics": null,
+        "makespan": 846.8087,
+        "transport_time": 653.4185
+      },
+      "generated_codes": {
+        "arm_0": {
+          "robot_id": "arm_0",
+          "operations": [
+            "op_3",
+            "op_1",
+            "op_4"
+          ],
+          "code": "def robot_behavior(robot_state, world_state):\n    # 操作 op_3 [0, 79]，工位 loc_3，工件 wp_0\n    elapsed = robot_state.last_time\n    if elapsed < 0:\n        wait(0 - elapsed)\n    move('loc_3', 5.0)\n    operate('task_execution', 'wp_0', 'loc_3')\n    # 等待到 end_time\n    elapsed = robot_state.last_time\n    if elapsed < 79:\n        wait(79 - elapsed)\n    \n    # 操作 op_1 [235, 289]，工位 loc_1，工件 wp_0\n    elapsed = robot_state.last_time\n    if elapsed < 235:\n        wait(235 - elapsed)\n    move('loc_1', 5.0)\n    operate('task_execution', 'wp_0', 'loc_1')\n    elapsed = robot_state.last_time\n    if elapsed < 289:\n        wait(289 - elapsed)\n    \n    # 操作 op_4 [289, 344]，工位 loc_4，工件 wp_1\n    elapsed = robot_state.last_time\n    if elapsed < 289:\n        wait(289 - elapsed)\n    move('loc_4', 5.0)\n    operate('task_execution', 'wp_1', 'loc_4')\n    elapsed = robot_state.last_time\n    if elapsed < 344:\n        wait(344 - elapsed)",
+          "explanation": "该代码严格按照调度时间窗执行三个操作。每个操作前等待到开始时间，然后移动到指定工位并执行操作，操作完成后等待到该操作的结束时间，以确保资源占用满足调度分配。初始位置为loc_0，通过move移动到各工位。使用operate原语执行task_execution操作。"
+        },
+        "arm_1": {
+          "robot_id": "arm_1",
+          "operations": [
+            "op_5",
+            "op_8",
+            "op_2",
+            "op_1",
+            "op_7",
+            "op_6"
+          ],
+          "code": "def robot_behavior(robot_state, world_state):\n    '''机械臂的行为函数'''\n    elapsed = robot_state.last_time\n\n    # 操作 op_5 [0,82]，位置 loc_5，工件 wp_1\n    if elapsed < 0:\n        wait(0 - elapsed)\n    move(\"loc_5\", 5.0)\n    operate(\"task_execution\", \"wp_1\", \"loc_5\")\n\n    # 操作 op_8 [82,148]，位置 loc_8，工件 wp_2\n    elapsed = robot_state.last_time\n    if elapsed < 82:\n        wait(82 - elapsed)\n    move(\"loc_8\", 5.0)\n    operate(\"task_execution\", \"wp_2\", \"loc_8\")\n\n    # 操作 op_2 [148,235]，位置 loc_2，工件 wp_0\n    elapsed = robot_state.last_time\n    if elapsed < 148:\n        wait(148 - elapsed)\n    move(\"loc_2\", 5.0)\n    operate(\"task_execution\", \"wp_0\", \"loc_2\")\n\n    # 操作 op_1 [235,289]，位置 loc_1，工件 wp_0\n    elapsed = robot_state.last_time\n    if elapsed < 235:\n        wait(235 - elapsed)\n    move(\"loc_1\", 5.0)\n    operate(\"task_execution\", \"wp_0\", \"loc_1\")\n\n    # 操作 op_7 [289,345]，位置 loc_7，工件 wp_2\n    elapsed = robot_state.last_time\n    if elapsed < 289:\n        wait(289 - elapsed)\n    move(\"loc_7\", 5.0)\n    operate(\"task_execution\", \"wp_2\", \"loc_7\")\n\n    # 操作 op_6 [345,444]，位置 loc_6，工件 wp_1\n    elapsed = robot_state.last_time\n    if elapsed < 345:\n        wait(345 - elapsed)\n    move(\"loc_6\", 5.0)\n    operate(\"task_execution\", \"wp_1\", \"loc_6\")\n",
+          "explanation": "生成代码按照调度列表顺序执行六个操作，每个操作前通过 wait 对齐时间窗起始时间。使用 move 原语移动到指定工位（固定耗时5秒），然后使用 operate 原语执行 task_execution 操作。每次操作后重新获取 robot_state.last_time 以确定下一个操作的等待时间。"
+        }
+      },
+      "feedback": {
+        "results": [
+          {
+            "operation_id": "arm_0_primitive_1",
+            "robot_id": "arm_0",
+            "workpiece_id": "loc_3",
+            "start_time": 0.0,
+            "end_time": 5.001583915427673,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_2",
+            "robot_id": "arm_0",
+            "workpiece_id": "wp_0",
+            "start_time": 5.001583915427673,
+            "end_time": 87.06776200323786,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_3",
+            "robot_id": "arm_0",
+            "workpiece_id": "unknown",
+            "start_time": 87.06776200323786,
+            "end_time": 235.0,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_4",
+            "robot_id": "arm_0",
+            "workpiece_id": "loc_1",
+            "start_time": 235.0,
+            "end_time": 239.86668883935616,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_5",
+            "robot_id": "arm_0",
+            "workpiece_id": "wp_0",
+            "start_time": 239.86668883935616,
+            "end_time": 318.5439197058037,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_6",
+            "robot_id": "arm_0",
+            "workpiece_id": "loc_4",
+            "start_time": 318.5439197058037,
+            "end_time": 323.7667416891932,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_0_primitive_7",
+            "robot_id": "arm_0",
+            "workpiece_id": "wp_1",
+            "start_time": 323.7667416891932,
+            "end_time": 426.0055050158424,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_1",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_5",
+            "start_time": 0.0,
+            "end_time": 4.799179537462462,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_2",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_1",
+            "start_time": 4.799179537462462,
+            "end_time": 108.57861199838683,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_3",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_8",
+            "start_time": 108.57861199838683,
+            "end_time": 113.68282362937752,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_4",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_2",
+            "start_time": 113.68282362937752,
+            "end_time": 178.28529741650635,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_5",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_2",
+            "start_time": 178.28529741650635,
+            "end_time": 183.37481961366856,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_6",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_0",
+            "start_time": 183.37481961366856,
+            "end_time": 265.06270516161624,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_7",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_1",
+            "start_time": 265.06270516161624,
+            "end_time": 270.275564777422,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_8",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_0",
+            "start_time": 270.275564777422,
+            "end_time": 348.5957391972633,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_9",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_7",
+            "start_time": 348.5957391972633,
+            "end_time": 353.3697334607053,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_10",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_2",
+            "start_time": 353.3697334607053,
+            "end_time": 420.7665667427967,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_11",
+            "robot_id": "arm_1",
+            "workpiece_id": "loc_6",
+            "start_time": 420.7665667427967,
+            "end_time": 425.8709396234732,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          },
+          {
+            "operation_id": "arm_1_primitive_12",
+            "robot_id": "arm_1",
+            "workpiece_id": "wp_1",
+            "start_time": 425.8709396234732,
+            "end_time": 527.642269534893,
+            "status": "success",
+            "reason": null,
+            "timestamp": "2026-06-23T17:44:30.836150"
+          }
+        ],
+        "total_makespan": 527.642269534893,
+        "success_count": 19,
+        "failure_count": 0,
+        "failure_details": {
+          "execution_traces": {
+            "arm_0": {
+              "robot_id": "arm_0",
+              "code_preview": "def robot_behavior(robot_state, world_state):\n    # 操作 op_3 [0, 79]，工位 loc_3，工件 wp_0\n    elapsed = robot_state.last_time\n    if elapsed < 0:\n        wait(0 - elapsed)\n    move('loc_3', 5.0)\n    operat...",
+              "primitives_called": 7,
+              "primitive_log": [
+                {
+                  "seq": 1,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_3",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.001583915427673
+                  },
+                  "start": 0.0,
+                  "end": 5.001583915427673,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 2,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_0",
+                    "location": "loc_3",
+                    "requested_duration": 79,
+                    "actual_duration": 82.06617808781019
+                  },
+                  "start": 5.001583915427673,
+                  "end": 87.06776200323786,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 3,
+                  "primitive": "wait",
+                  "args": {
+                    "duration": 147.93223799676213
+                  },
+                  "start": 87.06776200323786,
+                  "end": 235.0,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 4,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_1",
+                    "requested_duration": 5.0,
+                    "actual_duration": 4.866688839356151
+                  },
+                  "start": 235.0,
+                  "end": 239.86668883935616,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 5,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_0",
+                    "location": "loc_1",
+                    "requested_duration": 79,
+                    "actual_duration": 78.67723086644756
+                  },
+                  "start": 239.86668883935616,
+                  "end": 318.5439197058037,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 6,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_4",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.222821983389492
+                  },
+                  "start": 318.5439197058037,
+                  "end": 323.7667416891932,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 7,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_1",
+                    "location": "loc_4",
+                    "requested_duration": 99,
+                    "actual_duration": 102.23876332664919
+                  },
+                  "start": 323.7667416891932,
+                  "end": 426.0055050158424,
+                  "status": "success",
+                  "error": ""
+                }
+              ],
+              "total_time": 426.0055050158424,
+              "error": null,
+              "success": true
+            },
+            "arm_1": {
+              "robot_id": "arm_1",
+              "code_preview": "def robot_behavior(robot_state, world_state):\n    '''机械臂的行为函数'''\n    elapsed = robot_state.last_time\n\n    # 操作 op_5 [0,82]，位置 loc_5，工件 wp_1\n    if elapsed < 0:\n        wait(0 - elapsed)\n    move(\"loc_...",
+              "primitives_called": 12,
+              "primitive_log": [
+                {
+                  "seq": 1,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_5",
+                    "requested_duration": 5.0,
+                    "actual_duration": 4.799179537462462
+                  },
+                  "start": 0.0,
+                  "end": 4.799179537462462,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 2,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_1",
+                    "location": "loc_5",
+                    "requested_duration": 99,
+                    "actual_duration": 103.77943246092437
+                  },
+                  "start": 4.799179537462462,
+                  "end": 108.57861199838683,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 3,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_8",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.1042116309906955
+                  },
+                  "start": 108.57861199838683,
+                  "end": 113.68282362937752,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 4,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_2",
+                    "location": "loc_8",
+                    "requested_duration": 66,
+                    "actual_duration": 64.60247378712884
+                  },
+                  "start": 113.68282362937752,
+                  "end": 178.28529741650635,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 5,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_2",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.089522197162206
+                  },
+                  "start": 178.28529741650635,
+                  "end": 183.37481961366856,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 6,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_0",
+                    "location": "loc_2",
+                    "requested_duration": 79,
+                    "actual_duration": 81.68788554794769
+                  },
+                  "start": 183.37481961366856,
+                  "end": 265.06270516161624,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 7,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_1",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.212859615805773
+                  },
+                  "start": 265.06270516161624,
+                  "end": 270.275564777422,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 8,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_0",
+                    "location": "loc_1",
+                    "requested_duration": 79,
+                    "actual_duration": 78.32017441984128
+                  },
+                  "start": 270.275564777422,
+                  "end": 348.5957391972633,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 9,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_7",
+                    "requested_duration": 5.0,
+                    "actual_duration": 4.7739942634419545
+                  },
+                  "start": 348.5957391972633,
+                  "end": 353.3697334607053,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 10,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_2",
+                    "location": "loc_7",
+                    "requested_duration": 66,
+                    "actual_duration": 67.39683328209148
+                  },
+                  "start": 353.3697334607053,
+                  "end": 420.7665667427967,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 11,
+                  "primitive": "move",
+                  "args": {
+                    "location": "loc_6",
+                    "requested_duration": 5.0,
+                    "actual_duration": 5.1043728806764594
+                  },
+                  "start": 420.7665667427967,
+                  "end": 425.8709396234732,
+                  "status": "success",
+                  "error": ""
+                },
+                {
+                  "seq": 12,
+                  "primitive": "operate",
+                  "args": {
+                    "operation_type": "task_execution",
+                    "workpiece_id": "wp_1",
+                    "location": "loc_6",
+                    "requested_duration": 99,
+                    "actual_duration": 101.77132991141976
+                  },
+                  "start": 425.8709396234732,
+                  "end": 527.642269534893,
+                  "status": "success",
+                  "error": ""
+                }
+              ],
+              "total_time": 527.642269534893,
+              "error": null,
+              "success": true
+            }
+          }
+        }
+      },
+      "failure_reason": null
+    }
+  ]
+}

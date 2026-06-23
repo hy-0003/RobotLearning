@@ -1,0 +1,13 @@
+name: harness_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - pydantic>=2.7,<3.0
+      - python-dotenv>=1.0,<2.0
+      - openai>=1.40,<2.0
+      - anthropic>=0.34,<1.0
+      - matplotlib>=3.8,<4.0
+      - pytest>=8.0,<9.0

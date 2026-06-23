@@ -1,0 +1,864 @@
+{
+  "scene_id": "problem_instance_1p_000009",
+  "version": "1.0",
+  "source": "数据来源于 MRTA-Benchmark 数据集（arXiv:2603.02669, IMR-Bench），文件: problem_instance_1p_000009.json。任务数=8, 机器人=3, 包含单机器人和协作任务。",
+  "description": "MRTA-Benchmark 问题实例: 8 个任务, 3 台机器人。位置数: 10。任务执行时长范围: 53-94。",
+  "time_unit": "second",
+  "cell_layout": {
+    "locations": [
+      {
+        "id": "loc_0",
+        "name": "起始仓库(Depot)"
+      },
+      {
+        "id": "loc_1",
+        "name": "任务位置-1"
+      },
+      {
+        "id": "loc_2",
+        "name": "任务位置-2"
+      },
+      {
+        "id": "loc_3",
+        "name": "任务位置-3"
+      },
+      {
+        "id": "loc_4",
+        "name": "任务位置-4"
+      },
+      {
+        "id": "loc_5",
+        "name": "任务位置-5"
+      },
+      {
+        "id": "loc_6",
+        "name": "任务位置-6"
+      },
+      {
+        "id": "loc_7",
+        "name": "任务位置-7"
+      },
+      {
+        "id": "loc_8",
+        "name": "任务位置-8"
+      },
+      {
+        "id": "loc_9",
+        "name": "结束仓库(Depot)"
+      }
+    ],
+    "transport_edges": [
+      {
+        "from": "loc_0",
+        "to": "loc_1",
+        "distance": 58.6686
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_2",
+        "distance": 61.0983
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_3",
+        "distance": 43.3244
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_4",
+        "distance": 36.7967
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_5",
+        "distance": 51.3128
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_6",
+        "distance": 36.1248
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_7",
+        "distance": 31.9531
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_8",
+        "distance": 36.6742
+      },
+      {
+        "from": "loc_0",
+        "to": "loc_9",
+        "distance": 59.6657
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_0",
+        "distance": 58.6686
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_2",
+        "distance": 78.1857
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_3",
+        "distance": 18.0278
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_4",
+        "distance": 94.8683
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_5",
+        "distance": 26.9258
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_6",
+        "distance": 84.5044
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_7",
+        "distance": 62.0081
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_8",
+        "distance": 85.0
+      },
+      {
+        "from": "loc_1",
+        "to": "loc_9",
+        "distance": 67.1863
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_0",
+        "distance": 61.0983
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_1",
+        "distance": 78.1857
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_3",
+        "distance": 76.2758
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_4",
+        "distance": 82.1523
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_5",
+        "distance": 51.923
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_6",
+        "distance": 94.921
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_7",
+        "distance": 29.1548
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_8",
+        "distance": 42.45
+      },
+      {
+        "from": "loc_2",
+        "to": "loc_9",
+        "distance": 116.8289
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_0",
+        "distance": 43.3244
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_1",
+        "distance": 18.0278
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_2",
+        "distance": 76.2758
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_4",
+        "distance": 78.3901
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_5",
+        "distance": 31.7805
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_6",
+        "distance": 66.6033
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_7",
+        "distance": 54.4059
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_8",
+        "distance": 74.027
+      },
+      {
+        "from": "loc_3",
+        "to": "loc_9",
+        "distance": 52.2398
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_0",
+        "distance": 36.7967
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_1",
+        "distance": 94.8683
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_2",
+        "distance": 82.1523
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_3",
+        "distance": 78.3901
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_5",
+        "distance": 87.4586
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_6",
+        "distance": 26.4008
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_7",
+        "distance": 57.28
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_8",
+        "distance": 41.4367
+      },
+      {
+        "from": "loc_4",
+        "to": "loc_9",
+        "distance": 74.1485
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_0",
+        "distance": 51.3128
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_1",
+        "distance": 26.9258
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_2",
+        "distance": 51.923
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_3",
+        "distance": 31.7805
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_4",
+        "distance": 87.4586
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_6",
+        "distance": 84.8646
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_7",
+        "distance": 41.1096
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_8",
+        "distance": 66.7083
+      },
+      {
+        "from": "loc_5",
+        "to": "loc_9",
+        "distance": 82.9759
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_0",
+        "distance": 36.1248
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_1",
+        "distance": 84.5044
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_2",
+        "distance": 94.921
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_3",
+        "distance": 66.6033
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_4",
+        "distance": 26.4008
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_5",
+        "distance": 84.8646
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_7",
+        "distance": 66.4831
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_8",
+        "distance": 60.0333
+      },
+      {
+        "from": "loc_6",
+        "to": "loc_9",
+        "distance": 49.0408
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_0",
+        "distance": 31.9531
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_1",
+        "distance": 62.0081
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_2",
+        "distance": 29.1548
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_3",
+        "distance": 54.4059
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_4",
+        "distance": 57.28
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_5",
+        "distance": 41.1096
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_6",
+        "distance": 66.4831
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_8",
+        "distance": 26.0768
+      },
+      {
+        "from": "loc_7",
+        "to": "loc_9",
+        "distance": 88.7299
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_0",
+        "distance": 36.6742
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_1",
+        "distance": 85.0
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_2",
+        "distance": 42.45
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_3",
+        "distance": 74.027
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_4",
+        "distance": 41.4367
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_5",
+        "distance": 66.7083
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_6",
+        "distance": 60.0333
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_7",
+        "distance": 26.0768
+      },
+      {
+        "from": "loc_8",
+        "to": "loc_9",
+        "distance": 95.6922
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_0",
+        "distance": 59.6657
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_1",
+        "distance": 67.1863
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_2",
+        "distance": 116.8289
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_3",
+        "distance": 52.2398
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_4",
+        "distance": 74.1485
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_5",
+        "distance": 82.9759
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_6",
+        "distance": 49.0408
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_7",
+        "distance": 88.7299
+      },
+      {
+        "from": "loc_9",
+        "to": "loc_8",
+        "distance": 95.6922
+      }
+    ]
+  },
+  "resources": {
+    "robots": [
+      {
+        "id": "arm_0",
+        "name": "机械臂-0",
+        "initial_location": "loc_0",
+        "capabilities": [
+          "task_execution",
+          "transport"
+        ],
+        "tools": [
+          "gripper",
+          "tool_0"
+        ]
+      },
+      {
+        "id": "arm_1",
+        "name": "机械臂-1",
+        "initial_location": "loc_0",
+        "capabilities": [
+          "task_execution",
+          "transport"
+        ],
+        "tools": [
+          "gripper",
+          "tool_1"
+        ]
+      },
+      {
+        "id": "arm_2",
+        "name": "机械臂-2",
+        "initial_location": "loc_0",
+        "capabilities": [
+          "task_execution",
+          "transport"
+        ],
+        "tools": [
+          "gripper",
+          "tool_2"
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "id": "gripper",
+        "quantity": 10,
+        "supported_operations": [
+          "task_execution",
+          "transport"
+        ]
+      },
+      {
+        "id": "tool_0",
+        "quantity": 1,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "tool_1",
+        "quantity": 1,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "tool_2",
+        "quantity": 1,
+        "supported_operations": [
+          "task_execution"
+        ]
+      }
+    ],
+    "stations": [
+      {
+        "id": "loc_0",
+        "capacity": 10,
+        "supported_operations": [
+          "task_execution",
+          "transport"
+        ]
+      },
+      {
+        "id": "loc_1",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_2",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_3",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_4",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_5",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_6",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_7",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_8",
+        "capacity": 3,
+        "supported_operations": [
+          "task_execution"
+        ]
+      },
+      {
+        "id": "loc_9",
+        "capacity": 10,
+        "supported_operations": [
+          "task_execution",
+          "transport"
+        ]
+      }
+    ]
+  },
+  "operation_type_defaults": {
+    "task_execution": {
+      "base_duration": 80.0,
+      "timeout_limit": 200.0
+    },
+    "transport": {
+      "base_duration": 30.0,
+      "timeout_limit": 120.0
+    }
+  },
+  "workpieces": [
+    {
+      "id": "wp_0",
+      "name": "工件-0",
+      "initial_location": "loc_0",
+      "target_location": "loc_9",
+      "state_sequence": [
+        "state_0_start",
+        "state_op_1_done",
+        "state_op_2_done",
+        "state_op_3_done",
+        "state_0_complete"
+      ],
+      "operation_sequence": [
+        "op_1",
+        "op_2",
+        "op_3"
+      ]
+    },
+    {
+      "id": "wp_1",
+      "name": "工件-1",
+      "initial_location": "loc_0",
+      "target_location": "loc_9",
+      "state_sequence": [
+        "state_1_start",
+        "state_op_4_done",
+        "state_op_5_done",
+        "state_op_6_done",
+        "state_1_complete"
+      ],
+      "operation_sequence": [
+        "op_4",
+        "op_5",
+        "op_6"
+      ]
+    },
+    {
+      "id": "wp_2",
+      "name": "工件-2",
+      "initial_location": "loc_0",
+      "target_location": "loc_9",
+      "state_sequence": [
+        "state_2_start",
+        "state_op_7_done",
+        "state_op_8_done",
+        "state_2_complete"
+      ],
+      "operation_sequence": [
+        "op_7",
+        "op_8"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "op_1",
+      "workpiece_id": "wp_0",
+      "type": "task_execution",
+      "description": "任务 1 [协作任务]：执行时长 70s，可用机器人: arm_0, arm_1",
+      "duration": 70,
+      "allowed_robots": [
+        "arm_0",
+        "arm_1"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0",
+        "tool_1"
+      ],
+      "predecessors": [],
+      "required_station": "loc_1",
+      "location": "loc_1"
+    },
+    {
+      "id": "op_2",
+      "workpiece_id": "wp_0",
+      "type": "task_execution",
+      "description": "任务 2：执行时长 55s，可用机器人: arm_0",
+      "duration": 55,
+      "allowed_robots": [
+        "arm_0"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0"
+      ],
+      "predecessors": [],
+      "required_station": "loc_2",
+      "location": "loc_2"
+    },
+    {
+      "id": "op_3",
+      "workpiece_id": "wp_0",
+      "type": "task_execution",
+      "description": "任务 3：执行时长 68s，可用机器人: arm_0 前置: ['op_1']",
+      "duration": 68,
+      "allowed_robots": [
+        "arm_0"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0"
+      ],
+      "predecessors": [
+        "op_1"
+      ],
+      "required_station": "loc_3",
+      "location": "loc_3"
+    },
+    {
+      "id": "op_4",
+      "workpiece_id": "wp_1",
+      "type": "task_execution",
+      "description": "任务 4：执行时长 88s，可用机器人: arm_0",
+      "duration": 88,
+      "allowed_robots": [
+        "arm_0"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0"
+      ],
+      "predecessors": [],
+      "required_station": "loc_4",
+      "location": "loc_4"
+    },
+    {
+      "id": "op_5",
+      "workpiece_id": "wp_1",
+      "type": "task_execution",
+      "description": "任务 5：执行时长 94s，可用机器人: arm_0",
+      "duration": 94,
+      "allowed_robots": [
+        "arm_0"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0"
+      ],
+      "predecessors": [],
+      "required_station": "loc_5",
+      "location": "loc_5"
+    },
+    {
+      "id": "op_6",
+      "workpiece_id": "wp_1",
+      "type": "task_execution",
+      "description": "任务 6：执行时长 73s，可用机器人: arm_2",
+      "duration": 73,
+      "allowed_robots": [
+        "arm_2"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_2"
+      ],
+      "predecessors": [],
+      "required_station": "loc_6",
+      "location": "loc_6"
+    },
+    {
+      "id": "op_7",
+      "workpiece_id": "wp_2",
+      "type": "task_execution",
+      "description": "任务 7：执行时长 57s，可用机器人: arm_0",
+      "duration": 57,
+      "allowed_robots": [
+        "arm_0"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_0"
+      ],
+      "predecessors": [],
+      "required_station": "loc_7",
+      "location": "loc_7"
+    },
+    {
+      "id": "op_8",
+      "workpiece_id": "wp_2",
+      "type": "task_execution",
+      "description": "任务 8：执行时长 53s，可用机器人: arm_2",
+      "duration": 53,
+      "allowed_robots": [
+        "arm_2"
+      ],
+      "required_tools": [
+        "gripper",
+        "tool_2"
+      ],
+      "predecessors": [],
+      "required_station": "loc_8",
+      "location": "loc_8"
+    }
+  ],
+  "simulation": {
+    "duration_noise_ratio": 0.05,
+    "success_probability": 1.0,
+    "timeout_probability": 0.0,
+    "resource_conflict_probability": 0.0,
+    "station_release_rule": "操作完成后立即释放工位和工具"
+  }
+}

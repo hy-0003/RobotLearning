@@ -1,0 +1,115 @@
+{
+  "entries": [
+    {
+      "operation_id": "op_2",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_2",
+      "start_time": 0.0,
+      "end_time": 97.0,
+      "resources": [
+        "gripper",
+        "tool_2",
+        "loc_2"
+      ]
+    },
+    {
+      "operation_id": "op_6",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_0",
+      "start_time": 0.0,
+      "end_time": 77.0,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "loc_6"
+      ]
+    },
+    {
+      "operation_id": "op_1",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_0",
+      "start_time": 97.0,
+      "end_time": 149.0,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "tool_2",
+        "loc_1"
+      ]
+    },
+    {
+      "operation_id": "op_1",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_2",
+      "start_time": 97.0,
+      "end_time": 149.0,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "tool_2",
+        "loc_1"
+      ]
+    },
+    {
+      "operation_id": "op_7",
+      "workpiece_id": "wp_2",
+      "robot_id": "arm_1",
+      "start_time": 149.0,
+      "end_time": 231.0,
+      "resources": [
+        "gripper",
+        "tool_1",
+        "loc_7"
+      ]
+    },
+    {
+      "operation_id": "op_8",
+      "workpiece_id": "wp_2",
+      "robot_id": "arm_0",
+      "start_time": 149.0,
+      "end_time": 203.0,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "loc_8"
+      ]
+    },
+    {
+      "operation_id": "op_3",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_0",
+      "start_time": 203.0,
+      "end_time": 262.0,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "loc_3"
+      ]
+    },
+    {
+      "operation_id": "op_5",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_1",
+      "start_time": 231.0,
+      "end_time": 298.0,
+      "resources": [
+        "gripper",
+        "tool_1",
+        "loc_5"
+      ]
+    },
+    {
+      "operation_id": "op_4",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_1",
+      "start_time": 298.0,
+      "end_time": 367.0,
+      "resources": [
+        "gripper",
+        "tool_1",
+        "loc_4"
+      ]
+    }
+  ],
+  "makespan": 703.5807
+}

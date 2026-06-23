@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-06-23 17:48:09",
+  "n_datasets": 10,
+  "details": [
+    {
+      "scene_id": "problem_instance_1p_000000",
+      "gt_makespan": 570.16711,
+      "sys_makespan": 594.0198,
+      "delta_pct": 4.18,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.4399,
+      "constraint_violations": 0,
+      "overall_score": 100
+    },
+    {
+      "scene_id": "problem_instance_1p_000001",
+      "gt_makespan": 541.91373,
+      "sys_makespan": 703.5807,
+      "delta_pct": 29.83,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.2885,
+      "constraint_violations": 0,
+      "overall_score": 74
+    },
+    {
+      "scene_id": "problem_instance_1p_000002",
+      "gt_makespan": 520.2935,
+      "sys_makespan": 534.2435,
+      "delta_pct": 2.68,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.4792,
+      "constraint_violations": 0,
+      "overall_score": 100
+    },
+    {
+      "scene_id": "problem_instance_1p_000003",
+      "gt_makespan": 396.92129,
+      "sys_makespan": 396.92130000000003,
+      "delta_pct": 0.0,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.493,
+      "constraint_violations": 0,
+      "overall_score": 100
+    },
+    {
+      "scene_id": "problem_instance_1p_000004",
+      "gt_makespan": 552.20607,
+      "sys_makespan": 742.1745999999999,
+      "delta_pct": 34.4,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.3521,
+      "constraint_violations": 0,
+      "overall_score": 65
+    },
+    {
+      "scene_id": "problem_instance_1p_000005",
+      "gt_makespan": 585.95725,
+      "sys_makespan": 680.1475999999999,
+      "delta_pct": 16.07,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.3886,
+      "constraint_violations": 0,
+      "overall_score": 80
+    },
+    {
+      "scene_id": "problem_instance_1p_000006",
+      "gt_makespan": 575.56242,
+      "sys_makespan": 787.3155999999999,
+      "delta_pct": 36.79,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.3891,
+      "constraint_violations": 0,
+      "overall_score": 65
+    },
+    {
+      "scene_id": "problem_instance_1p_000007",
+      "gt_makespan": 448.19305,
+      "sys_makespan": 565.5791,
+      "delta_pct": 26.19,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.3684,
+      "constraint_violations": 0,
+      "overall_score": 74
+    },
+    {
+      "scene_id": "problem_instance_1p_000008",
+      "gt_makespan": 724.92877,
+      "sys_makespan": 846.8087,
+      "delta_pct": 16.81,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.3732,
+      "constraint_violations": 0,
+      "overall_score": 86
+    },
+    {
+      "scene_id": "problem_instance_1p_000009",
+      "gt_makespan": 704.34794,
+      "sys_makespan": 846.75,
+      "delta_pct": 20.22,
+      "task_success_rate": 1.0,
+      "resource_utilization": 0.2472,
+      "constraint_violations": 0,
+      "overall_score": 74
+    }
+  ]
+}

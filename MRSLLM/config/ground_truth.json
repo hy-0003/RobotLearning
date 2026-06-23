@@ -1,0 +1,140 @@
+{
+  "scene_id": "problem_instance_1p_000009",
+  "version": "1.0",
+  "source": "最优解来源于 MRTA-Benchmark 数据集（arXiv:2603.02669, IMR-Bench），文件: optimal_schedule_1p_000009.json。makespan=704.34794, 任务数=8, 机器人=3。",
+  "optimal_makespan": 704.34794,
+  "assumptions": [
+    "每台机器人同一时刻最多执行一个任务。",
+    "协作任务需要多台机器人同时参与。",
+    "运输时间已在 makespan 中体现。",
+    "最优解来自 MRTA-Benchmark 数据集，不包含随机失败。",
+    "运输操作从任务结束位置出发，到达下一个任务位置。"
+  ],
+  "schedule": [
+    {
+      "operation_id": "op_6",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_2",
+      "start_time": 36.1248,
+      "end_time": 109.1248,
+      "resources": [
+        "gripper",
+        "tool_2"
+      ]
+    },
+    {
+      "operation_id": "op_4",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_0",
+      "start_time": 36.7967,
+      "end_time": 124.7967,
+      "resources": [
+        "gripper",
+        "tool_0"
+      ]
+    },
+    {
+      "operation_id": "op_8",
+      "workpiece_id": "wp_2",
+      "robot_id": "arm_2",
+      "start_time": 169.1581,
+      "end_time": 222.1581,
+      "resources": [
+        "gripper",
+        "tool_2"
+      ]
+    },
+    {
+      "operation_id": "op_7",
+      "workpiece_id": "wp_2",
+      "robot_id": "arm_0",
+      "start_time": 182.0768,
+      "end_time": 239.0768,
+      "resources": [
+        "gripper",
+        "tool_0"
+      ]
+    },
+    {
+      "operation_id": "op_2",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_0",
+      "start_time": 268.2315,
+      "end_time": 323.2315,
+      "resources": [
+        "gripper",
+        "tool_0"
+      ]
+    },
+    {
+      "operation_id": "op_5",
+      "workpiece_id": "wp_1",
+      "robot_id": "arm_0",
+      "start_time": 375.1545,
+      "end_time": 469.1545,
+      "resources": [
+        "gripper",
+        "tool_0"
+      ]
+    },
+    {
+      "operation_id": "op_1",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_0",
+      "start_time": 496.0804,
+      "end_time": 566.0804,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "tool_1"
+      ]
+    },
+    {
+      "operation_id": "op_1",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_1",
+      "start_time": 496.0804,
+      "end_time": 566.0804,
+      "resources": [
+        "gripper",
+        "tool_0",
+        "tool_1"
+      ]
+    },
+    {
+      "operation_id": "op_3",
+      "workpiece_id": "wp_0",
+      "robot_id": "arm_0",
+      "start_time": 584.1081,
+      "end_time": 652.1081,
+      "resources": [
+        "gripper",
+        "tool_0"
+      ]
+    }
+  ],
+  "operation_order": [
+    "op_4",
+    "op_7",
+    "op_2",
+    "op_5",
+    "op_1",
+    "op_3",
+    "op_1",
+    "op_6",
+    "op_8"
+  ],
+  "metrics_baseline": {
+    "makespan": 704.34794,
+    "task_success_rate": 1.0,
+    "resource_utilization": {
+      "robot_utilization": {
+        "arm_0": 0.6133,
+        "arm_1": 0.0994,
+        "arm_2": 0.1789
+      },
+      "overall_robot_utilization": 0.2972
+    },
+    "constraint_violations": 0
+  }
+}
